@@ -10,13 +10,12 @@ public class Conexion {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
             String connectionUrl = "jdbc:sqlserver://localhost:1433;"
             + "databaseName=Northwind;"
-            + "user=xd;"
-            + "password=kakaroto25;"
+            + "user=sa;"
+            + "password=12345678;"
             + "trustServerCertificate=true";
             Connection con = DriverManager.getConnection(connectionUrl);
             return con;
         } catch (SQLException E) {
-            // TODO: handle exception
             System.out.println("ERROR DE CONEXION xd");
             int x = 1;
         }
