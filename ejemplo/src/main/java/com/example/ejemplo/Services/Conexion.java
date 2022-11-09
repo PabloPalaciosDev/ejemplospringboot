@@ -9,10 +9,10 @@ public class Conexion {
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
             String connectionUrl = "jdbc:sqlserver://localhost:1433;"
-            + "database=Northwind;"
-            + "user:sa;"
-            + "password=12345678;"
-            + "loginTimeout=30";
+            + "databaseName=Northwind;"
+            + "user=xd;"
+            + "password=kakaroto25;"
+            + "trustServerCertificate=true";
             Connection con = DriverManager.getConnection(connectionUrl);
             return con;
         } catch (SQLException E) {

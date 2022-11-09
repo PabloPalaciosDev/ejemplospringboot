@@ -24,12 +24,12 @@ public class EmpleadosDB {
             ResultSet result = stnt.executeQuery(query);
 
             while(result.next()){
-                Empleados empleado = new Empleados();{
-                    result.getString("Nombre");
-                    result.getString("Apellido");
-                    result.getString("Titulo");
-                    result.getString("ID");
-                }
+                Empleados empleado = new Empleados(
+                    result.getString("FirstName"),
+                    result.getString("LastName"),
+                    result.getString("Title"),
+                    result.getInt("EmployeeID")
+                );
 
                 empleados.add(empleado);
             }
